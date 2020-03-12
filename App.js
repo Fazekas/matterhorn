@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import ListViewComponent from './components/ListViewComponent';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <View style={{ flex: 1 }}>
+        <ListViewComponent />
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
