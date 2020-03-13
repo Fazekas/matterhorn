@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import ListViewComponent from './components/ListViewComponent';
+import FrameComponent from './FrameComponent';
 
-export default class App extends Component {
+export default class ListViewComponent extends Component {
   constructor(props) {
     super(props);
   }
@@ -10,15 +10,21 @@ export default class App extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <ListViewComponent />
+        <FrameComponent>
+          <Text>This is transcluded</Text>
+        </FrameComponent>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  header: {
     backgroundColor: 'red',
+    height: 50,
+  },
+  footer: {
+    backgroundColor: 'blue',
+    height: 100,
   },
 });
