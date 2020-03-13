@@ -1,10 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import SubjectList from './components/SubjectList'
+
 export default function App() {
-  return (
+  return (    
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <SubjectList/>
     </View>
   );
 }
@@ -12,8 +14,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: 'red',
   },
 });
