@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
+import { styleVariables } from '../style';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default class FrameComponent extends Component {
@@ -11,7 +12,7 @@ export default class FrameComponent extends Component {
     return (
       <View style={styles.frameComponent}>
         <View style={styles.header}>
-          <Icon name="settings" color="#35AAEC" size={36} />
+          <Icon name="settings" color={styleVariables.primaryColor} size={36} />
         </View>
         {this.props.children}
         <View style={styles.footerContainer}>
@@ -19,7 +20,7 @@ export default class FrameComponent extends Component {
             <Icon
               style={styles.addIcon}
               name="add-circle"
-              color="#35AAEC"
+              color={styleVariables.primaryColor}
               size={90}
             />
           </View>
