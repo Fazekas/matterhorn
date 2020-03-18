@@ -13,7 +13,9 @@ export default class FrameComponent extends Component {
         <View style={styles.header}>
           <Icon name="settings" color="#35AAEC" size={36} />
         </View>
+        <View style={{flex: 1}}>
         {this.props.children}
+          </View>
         <View style={styles.footerContainer}>
           <View style={styles.footer}>
             <Icon
@@ -39,7 +41,6 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   footerContainer: {
-    flex: 1,
     justifyContent: 'flex-end',
   },
   footer: {

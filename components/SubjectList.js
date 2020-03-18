@@ -13,6 +13,8 @@ export default class SubjectList extends Component{
       subjects: [
         {id: 0, name: 'German'},
         {id: 1, name: 'History'},
+        {id: 2, name: 'Japan'},
+        {id: 3, name: 'Nick is amazing'}
       ]
     };
   }
@@ -32,7 +34,7 @@ export default class SubjectList extends Component{
   render() {
     return (
       <View style={styles.container}>
-          <ScrollView>
+          <ScrollView contentContainerStyle={{justifyContent: 'space-between', flexDirection: 'row', flex: 1, flexWrap: 'wrap'}}>
             {
               this.state.subjects.map(subject => {
                 return <SubjectCard key={subject.id} id={subject.id} name={subject.name} />
@@ -46,8 +48,8 @@ export default class SubjectList extends Component{
 
 const styles = StyleSheet.create({
   container: {
-    padding: 50,
-
+    padding: 55,
+    flex: 1
   },
   backgroundImage:{
     flex: 1,

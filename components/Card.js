@@ -8,10 +8,8 @@ export default class Card extends Component {
 
   render() {
     return(
-      <View style={styles.container}>
-        <View style={styles.cardText}>
+      <View style={[styles.container, this.props.cardStyle]}>
           {this.props.children}
-        </View>
       </View>
     );
   }
@@ -19,13 +17,13 @@ export default class Card extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'blue',
+    backgroundColor: '#35AAEC',
+    padding: 8,
     borderRadius: 20,
     height: 90,
     width: 110,
-    textAlign: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 10
   },
-  cardText: {
-    textAlign: "center"
-  }
 });

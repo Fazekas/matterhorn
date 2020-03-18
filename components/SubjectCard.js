@@ -10,9 +10,18 @@ export default class SubjectCard extends Component {
 
     render() {
         return(
-            <Card>
-                <Text>{this.props.name}</Text>
+            <Card cardStyle={styles.stuff}>
+                <Text style={styles.things}>{this.props.name}</Text>
             </Card>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    stuff: {
+        marginBottom: 50,
+    },
+    things: {
+        color: '#6DE9FA',
+    }
+})

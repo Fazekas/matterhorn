@@ -9,9 +9,9 @@ export default class App extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1 }}>
-        <ListViewComponent />
-      </View>
+        <View style={{ flex: 1 }}>
+          <ListViewComponent />
+        </View>
     );
   }
 }
