@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import FrameComponent from './FrameComponent';
+import SubjectList from './SubjectList';
 
 export default class ListViewComponent extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ export default class ListViewComponent extends Component {
     return (
       <View style={{ flex: 1 }}>
         <FrameComponent>
-          <Text>This is transcluded</Text>
+          <SubjectList />
         </FrameComponent>
       </View>
     );
