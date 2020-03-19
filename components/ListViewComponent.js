@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 import FrameComponent from './FrameComponent';
+import AddSubjectModalComponent from './AddSubjectModalComponent';
 
 export default class ListViewComponent extends Component {
   constructor(props) {
@@ -10,6 +11,7 @@ export default class ListViewComponent extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
+        <AddSubjectModalComponent isVisible={true} />
         <FrameComponent>
           <Text>This is transcluded</Text>
         </FrameComponent>
