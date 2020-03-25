@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import FrameComponent from './FrameComponent';
-import SubjectList from './SubjectList';
-import AddSubjectModalComponent from './AddSubjectModalComponent';
+import AddSubjectModalComponent from './modals/AddSubjectModalComponent';
+import FlashcardListComponent from './FlashcardListComponent';
 
 export default class ListViewComponent extends Component {
   constructor(props) {
@@ -12,9 +12,9 @@ export default class ListViewComponent extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <AddSubjectModalComponent isVisible={true} />
+        <AddSubjectModalComponent isVisible={false} />
         <FrameComponent>
-          <SubjectList />
+          <FlashcardListComponent />
         </FrameComponent>
       </View>
     );

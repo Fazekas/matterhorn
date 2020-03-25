@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 import { styleVariables } from '../style';
+import TextComponent from './baseComponents/TextComponent';
 
 export default class ButtonComponent extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ export default class ButtonComponent extends Component {
   render() {
     return (
       <View style={[styles.inputContainer, this.props.inputContainerStyle]}>
-        <Text style={[styles.label]}>{this.props.label}</Text>
+        <TextComponent style={styles.label}>{this.props.label}</TextComponent>
         <TextInput
           style={styles.input}
           placeholder={this.props.placeholder}

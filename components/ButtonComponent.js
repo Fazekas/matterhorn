@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { styleVariables } from '../style';
 import { Button_TYPES } from '../constants';
+import TextComponent from './baseComponents/TextComponent';
 
 export default class ButtonComponent extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ export default class ButtonComponent extends Component {
       <View style={[this.props.btnContainerStyle]}>
         <TouchableOpacity
           style={[styles.button, styles[variant], this.props.style]}>
-          <Text style={styles.text}>{this.props.title}</Text>
+          <TextComponent>{this.props.title}</TextComponent>
         </TouchableOpacity>
       </View>
     );
@@ -39,8 +40,5 @@ const styles = StyleSheet.create({
     backgroundColor: styleVariables.secondaryColor,
     borderColor: styleVariables.textColor,
     borderWidth: 1,
-  },
-  text: {
-    color: styleVariables.textColor,
   },
 });
