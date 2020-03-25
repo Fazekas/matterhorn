@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
-import ButtonComponent from './ButtonComponent';
-import { styleVariables } from '../style';
-import InputComponent from './InputComponent';
+import ButtonComponent from '../ButtonComponent';
+import { styleVariables } from '../../style';
+import InputComponent from '../InputComponent';
 import BaseModalComponent from './BaseModalComponent';
-import { Button_TYPES, CONSTS } from '../constants';
+import { Button_TYPES, CONSTS } from '../../constants';
 
 export default class AddSubjectModalComponent extends Component {
   constructor(props) {

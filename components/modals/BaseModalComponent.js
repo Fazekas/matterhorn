@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 import Modal from 'react-native-modal';
-import { styleVariables } from '../style';
+import { styleVariables } from '../../style';
 
 export default class BaseModalComponent extends Component {
   constructor(props) {
