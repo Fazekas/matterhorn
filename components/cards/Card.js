@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, Animated } from 'react-native';
 import { styleVariables } from '../../style';
 
 export default class Card extends Component {
@@ -9,9 +9,9 @@ export default class Card extends Component {
 
   render() {
     return (
-      <View style={[styles.container, this.props.cardStyle]}>
+      <Animated.View style={[styles.container, this.props.cardStyle]}>
         {this.props.children}
-      </View>
+      </Animated.View>
     );
   }
 }

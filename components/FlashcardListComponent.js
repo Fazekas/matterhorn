@@ -10,13 +10,13 @@ export default class FlashcardListComponent extends Component {
     super(props);
     this.state = {
       subjects: [
-        { id: 0, name: 'German2' },
-        { id: 1, name: 'Histor2y' },
-        { id: 2, name: 'Japan2' },
-        { id: 3, name: 'Austria2' },
-        { id: 4, name: 'China2' },
-        { id: 5, name: 'Russia2' },
-        { id: 6, name: 'India2' },
+        { id: 0, name: 'German2', definition: 'def1' },
+        { id: 1, name: 'Histor2y', definition: 'def1' },
+        { id: 2, name: 'Japan2', definition: 'def1' },
+        { id: 3, name: 'Austria2', definition: 'def1' },
+        { id: 4, name: 'China2', definition: 'def1' },
+        { id: 5, name: 'Russia2', definition: 'def1' },
+        { id: 6, name: 'India2', definition: 'def1' },
       ],
       isAddFlashcardVisible: false,
     };
@@ -47,7 +47,8 @@ export default class FlashcardListComponent extends Component {
                   <FlashcardCardComponent
                     key={subject.id}
                     id={subject.id}
-                    name={subject.name}
+                    term={subject.name}
+                    definition={subject.definition}
                   />
                 );
               })}
