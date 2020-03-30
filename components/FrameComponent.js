@@ -8,15 +8,17 @@ export default class FrameComponent extends Component {
     super(props);
   }
 
+  onAddPress = () => {
+    this.props.onAddPress();
+  };
+
   render() {
     return (
-      <View style={styles.frameComponent}>
+      <View style={styles.container}>
         <View style={styles.header}>
           <Icon name="settings" color={styleVariables.primaryColor} size={36} />
         </View>
-        <View style={{flex: 1}}>
-        {this.props.children}
-          </View>
+        <View style={styles.container}>{this.props.children}</View>
         <View style={styles.footerContainer}>
           <View style={styles.footer}>
             <Icon
@@ -24,6 +26,9 @@ export default class FrameComponent extends Component {
               name="add-circle"
               color={styleVariables.primaryColor}
               size={90}
+              onPress={() => {
+                this.onAddPress();
+              }}
             />
           </View>
         </View>
@@ -33,7 +38,7 @@ export default class FrameComponent extends Component {
 }
 
 const styles = StyleSheet.create({
-  frameComponent: {
+  container: {
     flex: 1,
   },
   header: {

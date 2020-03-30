@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, ImageBackground } from 'react-native';
-import ListViewComponent from './components/ListViewComponent';
 import backgroundImage from './assets/minimalistic-blue-background.png';
+import FlashcardListComponent from './components/FlashcardListComponent';
 
 export default class App extends Component {
   constructor(props) {
@@ -10,9 +10,9 @@ export default class App extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1 }}>
+      <View style={styles.container}>
         <ImageBackground source={backgroundImage} style={styles.imageSize}>
-          <ListViewComponent />
+          <FlashcardListComponent />
         </ImageBackground>
       </View>
     );
@@ -22,7 +22,6 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red',
   },
   imageSize: {
     flex: 1,

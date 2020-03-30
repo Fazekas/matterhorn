@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
-import { styleVariables } from '../style';
-import TextComponent from './baseComponents/TextComponent';
+import { styleVariables } from '../../style';
+import TextComponent from './TextComponent';
 
 export default class ButtonComponent extends Component {
   constructor(props) {
