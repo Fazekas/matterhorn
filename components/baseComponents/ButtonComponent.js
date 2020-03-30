@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import { styleVariables } from '../style';
-import { Button_TYPES } from '../constants';
-import TextComponent from './baseComponents/TextComponent';
+import { styleVariables } from '../../style';
+import { Button_TYPES } from '../../constants';
+import TextComponent from './TextComponent';
 
 export default class ButtonComponent extends Component {
   constructor(props) {
@@ -16,7 +16,8 @@ export default class ButtonComponent extends Component {
     return (
       <View style={[this.props.btnContainerStyle]}>
         <TouchableOpacity
-          style={[styles.button, styles[variant], this.props.style]}>
+          style={[styles.button, styles[variant], this.props.style]}
+          onPress={() => this.props.onPress()}>
           <TextComponent>{this.props.title}</TextComponent>
         </TouchableOpacity>
       </View>

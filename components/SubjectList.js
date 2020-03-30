@@ -11,7 +11,7 @@ export default class SubjectList extends Component {
         { id: 0, name: 'German' },
         { id: 1, name: 'History' },
         { id: 2, name: 'Japan' },
-        { id: 3, name: 'Nick is amazing' },
+        { id: 3, name: 'China' },
       ],
     };
   }

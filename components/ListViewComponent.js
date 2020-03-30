@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 import FrameComponent from './FrameComponent';
-import AddSubjectModalComponent from './modals/AddSubjectModalComponent';
 import FlashcardListComponent from './FlashcardListComponent';
+import AddFlashcardModalComponent from './modals/AddFlashcardModalComponent';
 
 export default class ListViewComponent extends Component {
   constructor(props) {
@@ -11,8 +11,8 @@ export default class ListViewComponent extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1 }}>
-        <AddSubjectModalComponent isVisible={false} />
+      <View style={styles.container}>
+        <AddFlashcardModalComponent isVisible={true} />
         <FrameComponent>
           <FlashcardListComponent />
         </FrameComponent>
@@ -22,12 +22,13 @@ export default class ListViewComponent extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   header: {
-    backgroundColor: 'red',
     height: 50,
   },
   footer: {
-    backgroundColor: 'blue',
     height: 100,
   },
 });
